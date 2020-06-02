@@ -12,7 +12,6 @@ namespace MyFirstCSharpApp
         static void Main(string[] args)
         {
             List<Person> people = new List<Person>();
-            //List<string> textFinish = new List<string>();
             string[] myFileContent = System.IO.File.ReadAllLines("C:\\Users\\DCV\\Downloads\\persons.txt");
             foreach(string a in myFileContent)
             {
@@ -34,9 +33,7 @@ namespace MyFirstCSharpApp
             {
                 writeText[i] = people[i].Name + ";" + people[i].Age + ";" + people[i].City + ";" + people[i].Job;
             }
-
-
-             System.IO.File.WriteAllLines("C:\\Users\\DCV\\Downloads\\persons1.txt", writeText);
+            System.IO.File.WriteAllLines("C:\\Users\\DCV\\Downloads\\persons1.txt", writeText);
 
             Console.ReadKey();
         }
